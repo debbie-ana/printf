@@ -2,7 +2,7 @@
 
 /**
  * _putchar - to print a character
- * @parameter c: character to be printed
+ * @c: character to be printed
  *
  * Return: written character
  */

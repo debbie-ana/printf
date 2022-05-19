@@ -5,7 +5,7 @@
  * @format: character string including the format string
  *
  * Description - write output to stdout, the standard output stream
- * Returrn: the number of characters printed(excluding the null byte
+ * Return: the number of characters printed(excluding the null byte
  * used to end output to strings)
  */
 
@@ -27,8 +27,7 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			j = 0;
-			while (b[j].a)
+			for (j = 0; b[j].a; j++)
 			{
 				if (*(b[j].a) == format[i])
 				{
@@ -36,7 +35,6 @@ int _printf(const char *format, ...)
 					len += n;
 					break;
 				}
-				j++;
 			}
 			if (b[j].a == NULL)
 			{
