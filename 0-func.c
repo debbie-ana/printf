@@ -55,8 +55,9 @@ int conv_p(__attribute__((unused)) va_list p)
 
 int conv_d(va_list d)
 {
-	_putchar(var_arg (d, int));
-	return (1);
+	int number = va_arg(d, int);
+	
+	return (number);
 }
 
 /**
@@ -68,6 +69,6 @@ int conv_d(va_list d)
 
 int conv_i(va_list i)
 {
-	_putchar(var_arg (i, int));
+	_putchar(va_arg (i, int));
 	return (1);
 }
