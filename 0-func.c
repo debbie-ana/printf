@@ -45,3 +45,29 @@ int conv_p(__attribute__((unused)) va_list p)
 	_putchar ('%');
 	return (1);
 }
+
+/**
+ * conv_d - decimal integer
+ * @d: integer
+ *
+ * Return: int
+ */
+
+int conv_d(va_list d)
+{
+	_putchar(var_arg (d, int));
+	return (1);
+}
+
+/**
+ * conv_i - integer
+ * @i: integer
+ *
+ * Return: int
+ */
+
+int conv_i(va_list i)
+{
+	_putchar(var_arg (i, int));
+	return (1);
+}
