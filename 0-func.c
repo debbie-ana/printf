@@ -57,6 +57,7 @@ int conv_d(va_list d)
 {
 	int number = va_arg(d, int);
 	
+	(void)d;
 	return (number);
 }
 
@@ -69,6 +70,8 @@ int conv_d(va_list d)
 
 int conv_i(va_list i)
 {
-	_putchar(va_arg (i, int));
-	return (1);
+	int num = va_arg (i, int);
+
+	(void)i;
+	return (num);
 }
