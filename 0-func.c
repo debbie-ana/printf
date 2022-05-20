@@ -26,11 +26,10 @@ int conv_s(va_list s)
 	int i;
 	char *str = va_arg(s, char *);
 
-	if (str != NULL)
-	{
-		for (i = 0; str[i] != '\0'; i++)
-			_putchar (str[i]);
-	}
+	if (str == 0)
+		str = "(null)";
+	for (i = 0; str[i] != '\0'; i++)
+		_putchar (str[i]);
 	return (i);
 }
 
