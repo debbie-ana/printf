@@ -59,8 +59,6 @@ int conv_d(va_list d)
 	int a, count, i = 0;
 
 	n = va_arg(d, int);
-	if (n < INT_MIN || n > INT_MAX)
-		return (-1);
 	if (n < 0)
 	{
 		i += _putchar(45);
