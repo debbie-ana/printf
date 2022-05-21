@@ -18,6 +18,8 @@ int conv_s(va_list);
 int conv_p(va_list);
 int conv_d(va_list);
 int print_b(va_list);
+int print_o(va_list);
+int print_x(va_list);
 int get_func(const char *format, va_list args, conv_a b[]);
 int _printf(const char *format, ...);
 
