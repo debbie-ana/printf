@@ -55,10 +55,12 @@ int conv_p(__attribute__((unused)) va_list p)
 
 int conv_d(va_list d)
 {
-	int n;
-	int a, count, i = 0;
+	int n, count, i = 0;
+	unsigned int a;
 
 	n = va_arg(d, int);
+	if (n < INT_MIN || n > INT_MAX)
+		return (-1);
 	if (n < 0)
 	{
 		i += _putchar(45);
@@ -70,7 +72,7 @@ int conv_d(va_list d)
 	{
 		count *= 10;
 	}
-	for (; count >= 1; a %= count, count /= 10)
+	for (; count != 0; a %= count, count /= 10)
 		i += _putchar((a / count) + '0');
 	return (i);
 }
