@@ -47,10 +47,10 @@ int conv_p(__attribute__((unused)) va_list p)
 }
 
 /**
- * conv_d - integer or decimal format
- * @d: integer value to be printed
+ * conv_d - decimal integer
+ * @d: integer
  *
- * Return: count of digits
+ * Return: int
  */
 
 int conv_d(va_list d)
