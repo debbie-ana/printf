@@ -68,6 +68,8 @@ int _printf(const char *format, ...)
 		{"c", conv_c},
 		{"s", conv_s},
 		{"%", conv_p},
+		{"d", conv_d},
+		{"i", conv_d},
 		{NULL, NULL}
 	};
 	va_list(ap);

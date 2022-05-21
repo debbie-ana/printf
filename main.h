@@ -4,6 +4,7 @@
 #include <stdarg.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <limits.h>
 
 typedef struct convert
 {
@@ -14,6 +15,7 @@ int _putchar(char c);
 int conv_c(va_list);
 int conv_s(va_list);
 int conv_p(va_list);
+int conv_d(va_list);
 int get_func(const char *format, va_list args, conv_a b[]);
 int _printf(const char *format, ...);
 
