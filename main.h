@@ -16,6 +16,7 @@ int conv_s(va_list);
 int conv_p(va_list);
 int conv_d(va_list);
 int conv_i(va_list);
+int _puts(char *str);
 int get_func(const char *format, va_list args, conv_a b[]);
 int _printf(const char *format, ...);
 

@@ -23,5 +23,20 @@ int _putchar(char c)
 		buf[i] = c;
 		i++;
 	}
-	return (write(1, &c, 1));
+	return (1);
+}
+
+/**
+ * _puts - prints a string
+ * @str: pointer to string
+ * Return: numbeer of char
+ */
+
+int _puts(char *str)
+{
+	register int i;
+
+	for (i = 0; str[i] != '\0'; i++)
+		_putchar(str[i]);
+	return (i);
 }
