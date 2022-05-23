@@ -1,6 +1,28 @@
 #include "main.h"
 
 /**
+ * convert - converts to hex
+ * @n: number to convert
+ *
+ * Return: converted number
+ */
+char *convert(unsigned int n)
+{
+	static char rep[] = "0123456789";
+	static char buff[50];
+	char *ptr;
+
+	ptr = &buff[49];
+	*ptr = '\0';
+	do
+	{
+		*--ptr = rep[n % 16];
+		n /= 16;
+	}while (n != 0);
+	return (ptr);
+}
+
+/**
  * print_S - prints the string
  * @s: string to be printed
  *
@@ -19,8 +41,7 @@ int print_S(va_list s)
 		{
 			_putchar('\\');
 			_putchar('x');
-			_putchar(str[i] / 16)
-			_putchar(str[i] % 16);
+			result = convert(s[i]);
 			len += 4;
 		}
 		else
