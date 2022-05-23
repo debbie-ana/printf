@@ -19,8 +19,8 @@ int print_S(va_list s)
 		{
 			_putchar('\\');
 			_putchar('x');
-			_putchar('0');
-			_putchar('A');
+			_putchar(str[i] / 16)
+			_putchar(str[i] % 16);
 			len += 4;
 		}
 		else
