@@ -71,6 +71,7 @@ int _printf(const char *format, ...)
 		{"d", conv_d},
 		{"i", conv_d},
 		{"b", conv_b},
+		{"u", conv_u},
 		{"o", conv_o},
 		{"x", conv_x},
 		{"X", conv_ux},
