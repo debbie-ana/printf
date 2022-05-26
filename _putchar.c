@@ -12,7 +12,7 @@
 
 int _putchar(char c)
 {
-	/* static char buff[1024];
+	static char buff[1024];
 	static int i;
 
 	if (c == -1 || i >= 1024)
@@ -24,6 +24,22 @@ int _putchar(char c)
 	{
 		buff[i] = c;
 		i++;
-	}*/
-	return (write(1, &c, 1));
+	}
+	return (1);
+}
+
+/**
+ * _puts -  prints a string
+ * @str: string to be printed
+ *
+ * Return: int
+ */
+
+int _puts(char *str)
+{
+	register int n;
+
+	for (n = 0; str[n] != '\0'; n++)
+		_putchar(str[n]);
+	return (n);
 }

@@ -13,6 +13,7 @@ typedef struct convert
 } conv_a;
 
 int _putchar(char c);
+int _puts(char *str);
 int conv_c(va_list);
 int conv_s(va_list);
 int conv_p(va_list);
@@ -26,6 +27,8 @@ int conv_o(va_list);
 int conv_x(va_list);
 int conv_ux(va_list);
 int conv_u(va_list u);
+char *converts(unsigned int num);
+int conv_S(va_list arg);
 int get_func(const char *format, va_list args, conv_a b[]);
 int _printf(const char *format, ...);
 
