@@ -29,6 +29,9 @@ int conv_ux(va_list);
 int conv_u(va_list u);
 char *converts(unsigned int num);
 int conv_S(va_list arg);
+int conv_add(va_list);
+int print_rev(va_list);
+int print_r13(va_list);
 int get_func(const char *format, va_list args, conv_a b[]);
 int _printf(const char *format, ...);
 
