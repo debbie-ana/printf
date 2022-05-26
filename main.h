@@ -27,7 +27,7 @@ int conv_o(va_list);
 int conv_x(va_list);
 int conv_ux(va_list);
 int conv_u(va_list u);
-char *converts(unsigned int num);
+char *converts(unsigned int num, int c);
 int conv_S(va_list arg);
 int conv_add(va_list);
 int print_rev(va_list);

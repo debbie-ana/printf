@@ -16,7 +16,7 @@ int conv_add(va_list a)
 
 	if (!p)
 		return (_puts("(nil)"));
-	s = converts(p);
+	s = converts(p, 1);
 	len += _puts("0x");
 	len += _puts(s);
 	return (len);

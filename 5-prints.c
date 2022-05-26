@@ -3,16 +3,19 @@
 /**
  * converts - converts to hex
  * @num: number to convert
+ * @c: to determine if lower or upper
  *
  * Return: hex value
  */
-char *converts(unsigned int num)
+
+char *converts(unsigned int num, int c)
 {
 	static char *rep;
 	static char buff[50];
 	char *str;
 
-	rep = "0123456789ABCDEF";
+	rep = (c) ? "0123456789abcdef"
+		: "0123456789ABCDEF";
 	str = &buff[49];
 	*str = '\0';
 	do {
@@ -43,7 +46,7 @@ int conv_S(va_list arg)
 		{
 			_puts("\\x");
 			len += 2;
-			s = converts(a[i]);
+			s = converts(a[i], 0);
 			if (!s[1])
 			{
 				len += _putchar('0');
